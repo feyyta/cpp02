@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:30:53 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/13 16:32:53 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/11/13 17:33:35 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,7 +112,7 @@ Fixed Fixed::operator/(const Fixed &other) const{
 	return result;
 }
 
-Fixed& Fixed::operator++(void){
+Fixed &Fixed::operator++(void){
 	this->_value++;
 	return *this;
 }
@@ -123,7 +123,7 @@ Fixed Fixed::operator++(int){
 	return temp;
 }
 
-Fixed& Fixed::operator--(void){
+Fixed &Fixed::operator--(void){
 	this->_value--;
 	return *this;
 }
@@ -134,25 +134,25 @@ Fixed Fixed::operator--(int){
 	return temp;
 }
 
-Fixed& Fixed::min(Fixed &a, Fixed &b){
+Fixed &Fixed::min(Fixed &a, Fixed &b){
 	if (a < b)
 		return a;
 	return b;
 }
 
-const Fixed& Fixed::min(const Fixed &a, const Fixed &b){
+const Fixed &Fixed::min(const Fixed &a, const Fixed &b){
 	if (a < b)
 		return a;
 	return b;
 }
 
-Fixed& Fixed::max(Fixed &a, Fixed &b){
+Fixed &Fixed::max(Fixed &a, Fixed &b){
 	if (a > b)
 		return a;
 	return b;
 }
 
-const Fixed& Fixed::max(const Fixed &a, const Fixed &b){
+const Fixed &Fixed::max(const Fixed &a, const Fixed &b){
 	if (a > b)
 		return a;
 	return b;

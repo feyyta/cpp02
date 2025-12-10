@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:48:53 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/12 16:56:03 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:54:36 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,7 @@
 
 #include <iostream>
 #include <cmath>
-/*Le but des fixed-point est d'avoir la vitesse des entiers avec la
-  précision des décimaux
-  
- Analogie :
-  C'est comme stocker des centimes dans un int :
-  - Tu as 42€50
-  - Tu stockes 4250 (en centimes)
-  - C'est un INT, mais tu l'INTERPRÈTES comme des euros avec 2 décimales
- */
+
 class Fixed {
 
 	private:
@@ -45,5 +37,10 @@ class Fixed {
 		int toInt(void) const;
 };
 std::ostream &operator<<(std::ostream &out, const Fixed &fixed);
+ /*std::ostream a son constructeur de copie private
+  class ostream {
+  private:
+      ostream(const ostream&);  // Copie interdite
+  };*/
 
 #endif

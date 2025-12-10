@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 13:55:34 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/12 14:11:24 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/12/10 15:26:35 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,13 @@ class Fixed {
 
 	private:
 		int	 _value;
-		static const int _fractionalBits = 8;
+		static const int _fractionalBits = 8; // pour la part decimale
 
 	public:
 		Fixed();
 		Fixed(const Fixed &other);
 		Fixed& operator=(const Fixed &other);
 		~Fixed();
-
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
 };

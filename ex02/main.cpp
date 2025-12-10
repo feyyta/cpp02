@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 16:27:49 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/13 17:20:34 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/12/10 16:21:49 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,6 @@ int main(void){
 	std::cout << a << std::endl;
 	           //a.operation.....
 	std::cout << b << std::endl;
-	std::cout << Fixed::max(a, b) << std::endl;
+	std::cout << Fixed::min(a, b) << std::endl;
 	return 0;
 }

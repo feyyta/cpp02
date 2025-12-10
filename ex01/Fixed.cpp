@@ -6,7 +6,7 @@
 /*   By: mcastrat <mcastrat@student.42belgium.be    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/12 14:48:57 by mcastrat          #+#    #+#             */
-/*   Updated: 2025/11/12 16:25:56 by mcastrat         ###   ########.fr       */
+/*   Updated: 2025/12/10 16:11:04 by mcastrat         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,16 @@
 Fixed::Fixed() : _value(0){
 	std::cout << "Default constructor called" << std::endl;
 }
+/*42 (sans décalage):
+  00000000 00000000 00000000 00101010
+                             └──┬──┘
+                               42
 
+  42 << 8 (avec décalage):
+  00000000 00000000 00101010 00000000
+                    └──┬──┘  └──┬──┘
+                      42     frac=0
+*/
 Fixed::Fixed(const int n) : _value(n << _fractionalBits){
 	std::cout << "Int constructor called" << std::endl;
 }
